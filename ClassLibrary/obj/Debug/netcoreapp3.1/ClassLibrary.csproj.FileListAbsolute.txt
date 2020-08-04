@@ -1,0 +1,14 @@
+D:\GitHubProjects\ClassLibrary\ClassLibrary\bin\Debug\netcoreapp3.1\ClassLibrary.exe
+D:\GitHubProjects\ClassLibrary\ClassLibrary\bin\Debug\netcoreapp3.1\ClassLibrary.deps.json
+D:\GitHubProjects\ClassLibrary\ClassLibrary\bin\Debug\netcoreapp3.1\ClassLibrary.runtimeconfig.json
+D:\GitHubProjects\ClassLibrary\ClassLibrary\bin\Debug\netcoreapp3.1\ClassLibrary.runtimeconfig.dev.json
+D:\GitHubProjects\ClassLibrary\ClassLibrary\bin\Debug\netcoreapp3.1\ClassLibrary.dll
+D:\GitHubProjects\ClassLibrary\ClassLibrary\bin\Debug\netcoreapp3.1\ClassLibrary.pdb
+D:\GitHubProjects\ClassLibrary\ClassLibrary\obj\Debug\netcoreapp3.1\ClassLibrary.csprojAssemblyReference.cache
+D:\GitHubProjects\ClassLibrary\ClassLibrary\obj\Debug\netcoreapp3.1\ClassLibrary.AssemblyInfoInputs.cache
+D:\GitHubProjects\ClassLibrary\ClassLibrary\obj\Debug\netcoreapp3.1\ClassLibrary.AssemblyInfo.cs
+D:\GitHubProjects\ClassLibrary\ClassLibrary\obj\Debug\netcoreapp3.1\ClassLibrary.dll
+D:\GitHubProjects\ClassLibrary\ClassLibrary\obj\Debug\netcoreapp3.1\ClassLibrary.pdb
+D:\GitHubProjects\ClassLibrary\ClassLibrary\bin\Debug\netcoreapp3.1\BankLibrary.dll
+D:\GitHubProjects\ClassLibrary\ClassLibrary\bin\Debug\netcoreapp3.1\BankLibrary.pdb
+D:\GitHubProjects\ClassLibrary\ClassLibrary\obj\Debug\netcoreapp3.1\ClassLibrary.csproj.CopyComplete
