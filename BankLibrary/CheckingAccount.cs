@@ -26,9 +26,9 @@ namespace BankLibrary
         {
             return base.Withdraw(sum);
         }
-        //public override void Display()
-        //{
-        //    Console.WriteLine($"State of the current Checking Account:\nAccountId: {Id}\tAccountSum: {Sum}\tAccountPercentage: {Percantage}");
-        //}
+        protected internal override void Display()
+        {
+            Console.WriteLine($"State of the current Checking Account:\nAccountId: {Id}\tAccountSum: {Sum}\tAccountDays: {_days}");
+        }
     }
 }

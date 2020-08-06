@@ -37,9 +37,9 @@ namespace BankLibrary
                 base.Calculate();
             //else base.OnCalculated(new AccountEventArgs($"You can only credit interest on the Deposit Account after a 30-day period!", 0));
         }
-        //public override void Display()
-        //{
-        //    Console.WriteLine($"State of the current Account:\nAccountId: {Id}\tAccountSum: {Sum}\tAccountPercentage: {Percantage}\tAccountDays: {_days}");
-        //}
+        protected internal override void Display()
+        {
+            Console.WriteLine($"State of the current Account:\nAccountId: {Id}\tAccountSum: {Sum}\tAccountPercentage: {Percentage}\tAccountDays: {_days}");
+        }
     }
 }

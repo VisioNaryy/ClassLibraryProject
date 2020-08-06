@@ -14,7 +14,7 @@ namespace ClassLibrary
                 ConsoleColor color = Console.ForegroundColor;
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("1. Open an account\t 2. Withdraw funds from the account\t 3. Add funds to the account");
-                Console.WriteLine("4. Close an account\t 5. Skip the day\t 6. Exit the program");
+                Console.WriteLine("4. Close an account\t 5. Skip the day\t 6. Exit the program\t 7.Display more info");
                 Console.WriteLine("Choose the number of an option: ");
                 Console.ForegroundColor = color;
 
@@ -40,6 +40,9 @@ namespace ClassLibrary
                         case 6:
                             alive = false;
                             continue;
+                        case 7:
+                            DisplayAccount(bank);
+                            break;
                             
                     }
                     bank.CalculatePercentage();
@@ -69,7 +72,7 @@ namespace ClassLibrary
 
             bank.Open(accountType, sum, AddSumHandler, WithdrawSumHandler,
                 (o, e) => Console.WriteLine(e.Message),
-                CloseAccountHandler, OpenAccountHandler);
+                CloseAccountHandler, OpenAccountHandler, DisplayAccountHandler);
         }
         private static void Withdraw(Bank<Account> bank)
         {
@@ -96,6 +99,12 @@ namespace ClassLibrary
 
             bank.Close(id);
         }
+        private static void DisplayAccount(Bank<Account> bank)
+        {
+            Console.WriteLine("Enter the id of the account you want to display:");
+            int id = Int32.Parse(Console.ReadLine());
+            bank.Display(id);
+        }
 
         //events handlers
         private static void OpenAccountHandler(object sender, AccountEventArgs e)
@@ -111,6 +120,10 @@ namespace ClassLibrary
             Console.WriteLine(e.Message);
         }
         private static void CloseAccountHandler(object sender, AccountEventArgs e)
+        {
+            Console.WriteLine(e.Message);
+        }
+        private static void DisplayAccountHandler(object sender, AccountEventArgs e)
         {
             Console.WriteLine(e.Message);
         }
