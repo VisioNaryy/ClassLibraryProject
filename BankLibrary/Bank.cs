@@ -21,7 +21,7 @@ namespace BankLibrary
         //creating an Account
         public void Open(AccountType accountType, decimal sum, AccountStateHandler addSumHandler,
             AccountStateHandler withdrawSumHandler, AccountStateHandler calculateHandler, AccountStateHandler openAccountHandler,
-            AccountStateHandler closeAccountHandler)
+            AccountStateHandler closeAccountHandler, AccountStateHandler displayAccountHandler)
         {
             T newAccount = null;
             switch (accountType)
@@ -49,6 +49,7 @@ namespace BankLibrary
             newAccount.Calculated += calculateHandler;
             newAccount.Opened += openAccountHandler;
             newAccount.Closed += closeAccountHandler;
+            newAccount.Displayed += displayAccountHandler;
             if(accountType == AccountType.Checking)
             {
                 newAccount.Calculated -= calculateHandler;
@@ -88,6 +89,13 @@ namespace BankLibrary
                 acc.IncrementDays();
                 acc.Calculate();
             }
+        }
+        public void Display(int id)
+        {
+            T account = FindAccount(id);
+            if (account == null)
+                Console.WriteLine("Can not find an Account!");
+            account.Display();
         }
         public T FindAccount(int id)
         {

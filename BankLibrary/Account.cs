@@ -11,6 +11,7 @@ namespace BankLibrary
         protected internal event AccountStateHandler Opened; //account type
         protected internal event AccountStateHandler Closed; //account type
         protected internal event AccountStateHandler Calculated; //percentage
+        protected internal event AccountStateHandler Displayed; //display more info about account
 
         protected static int counter = 0;
         protected int _days = 0;
@@ -32,10 +33,6 @@ namespace BankLibrary
             Percentage = percentage;
             Id = ++counter;
         }
-        //public virtual void Display()
-        //{
-            
-        //}
 
         public virtual void Put(decimal sum)
         {
@@ -86,6 +83,10 @@ namespace BankLibrary
             OnCalculated(new AccountEventArgs($"Interest of {increment} % was credited.", increment));
 
         }
+        protected internal virtual void Display()
+        {
+            OnDisplayed(new AccountEventArgs($"State of the current Checking Account:\nAccountId: {Id}\tAccountSum: {Sum}",0));
+        }
 
 
         //Invoking events
@@ -113,6 +114,10 @@ namespace BankLibrary
         protected virtual void OnCalculated(AccountEventArgs e)
         {
             CallEvent(e, Calculated);
+        }
+        protected virtual void OnDisplayed(AccountEventArgs e)
+        {
+            CallEvent(e, Displayed);
         }
 
     }
